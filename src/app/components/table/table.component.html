@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">SNo.</th>
+      <th scope="col">Title</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let eachTodoInfo of todoList;let index=index">
+      <th scope="row">{{ index + 1}}</th>
+      <td>{{ eachTodoInfo?.title}}</td>
+      <td>{{ eachTodoInfo?.completed ? 'Completed' : 'In Complete'}}</td>
+    </tr>
+  </tbody>
+</table>
